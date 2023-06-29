@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Inter&family=Neucha&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <section class="registration">
+    <div class="container">
+      <div class="registration__inner ">
+        <h1 class="title">Регистрация</h1>
+        <form action="" class="form__block first__form" novalidate>
+          <div class="form__top">
+            <label class="placeinput">
+              <div class="input__box">
+                <input class="validation text input test" required="1" type="text"
+                  oninput='this.value=this.value.replace(/[^а-яё\s]/gi, "");' />
+                <div class="place__holder">Фамилия<span>*</span></div>
+              </div>
+            </label>
+            <label class="placeinput">
+              <div class="input__box">
+                <input class="validation text input test" required="1" type="text"
+                  oninput='this.value=this.value.replace(/[^а-яё\s]/gi, "")' />
+                <div class="place__holder">Имя<span>*</span></div>
+              </div>
+            </label>
+          </div>
+          <div action="" class="form__down">
+            <label class="placeinput">
+              <input class="text input " required="1" type="text" required="false"
+                oninput='this.value=this.value.replace(/[^а-яё\s]/gi, "")' />
+              <div class="place__holder top">Отчество<span></span></div>
+            </label>
+            <label class="placeinput">
+              <input class="date" name="date" type="text" onfocus="(this.type='date')"
+                onblur="if(!this.value)this.type='text'" placeholder="Дата рождения">
+            </label>
+          </div>
+          <div class="gender">
+            <p class="gender__text">Пол</p>
+            <form action="" class="form">
+              <div class="radiobuttons">
+                <div class="radiobuttons__item">
+                  <input type="radio" value="1" name="nameradio" name="мужской">
+                  <p class="radio__gender">Мужской</p>
+                </div>
+                <div class="radiobuttons__item">
+                  <input class="input" type="radio" value="2" name="nameradio" name="Женский">
+                  <p class="radio__gender">Женский</p>
+                </div>
+              </div>
+          </div>
+          <div class="form__top">
+            <label class="placeinput">
+              <input class="number input" data-tel-input required="1" type="tel" maxlength="18" />
+              <div class="place__holder top">Номер телефона<span></span></div>
+            </label>
+
+            <label class="placeinput">
+              <div class="input__box">
+                <input class="validation  input" name="Почта" required="1" type="text" />
+                <div class="place__holder">Электронная почта<span>*</span></div>
+              </div>
+            </label>
+          </div>
+          <div class="form__down">
+            <label class="placeinput password__label">
+              <div class="input__box">
+                <input class="validation input password pass" name="Пароль" required="1" type="password"
+                  id="js-first-password" name='Пароль' />
+                <div class="place__holder ">Пароль<span>*</span>
+                </div>
+                <a class="btn__pass js-btn-password" data-target="#js-first-password"></a>
+              </div>
+            </label>
+            <label class="placeinput password__label">
+              <div class="input__box">
+                <input class="validation input confirm-password pass" required="1" type="password"
+                  id="js-second-password" name='Повтор пароля' />
+                <div class="place__holder ">Напишите пароль ещё раз<span>*</span>
+                </div>
+                <a class="btn__pass js-btn-password" data-target="#js-second-password"></a>
+              </div>
+            </label>
+          </div>
+          <input type="checkbox" class="custom-checkbox" id="agree" name="agree" value="yes">
+          <label class="agreement" for="agree">Я принимаю <a
+              href="https://shra.ru/polzovatelskoe-soglashenie/">соглашение
+              сайта</a> об обработке персональных данных. <span>*</span></label>
+          <div class="buttons">
+            <button type="submit" class="sign__in btn" disabled>Зарегистрироваться</button>
+            <button class="clear btn" type="button">Очистить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="signing none">
+    <div class="container">
+      <div class="signing__inner ">
+        <h2 class="signing-title title">Вход</h2>
+        <form action="" class="signing-form" novalidate>
+          <label class="placeinput">
+            <div class="input__box">
+              <input class="signing-email sign-input" name="Почта" required="1" type="text" />
+              <div class="place__holder abob">Электронная почта</div>
+            </div>
+          </label>
+          <label class="placeinput">
+            <div class="input__box signing">
+              <input class="signing-pass sign-input" name="Пароль" required="1" type="password" />
+              <div class="place__holder abob">Пароль</div>
+            </div>
+          </label>
+        </form>
+        <button type="submit" class="signing-btn btn">Войти</button>
+        <p class="signing-forget"><a href="" class="signing-forget__link">Забыли пароль?</a></p>
+        <p class="signing-reg">У меня нет аккаунта. <span>Регистрация</span></p>
+      </div>
+    </div>
+  </section>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="./js/checkboxes.js"></script>
+<script src="./js/phoneinput.js"></script>
+<script src="./js/inputs.js"></script>
+<script src="./js/form-data.js"></script>
+
+</html>
